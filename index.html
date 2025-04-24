@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <!-- META TAGS -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="robots" content="max-image-preview:large" />
+
+    <!-- TÍTULO -->
+    <title>Atlas Mazateco</title>
+
+    <!-- LINKS A FRAMEWORKS, HOJAS DE ESTILO Y FUENTES-->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+      integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+      crossorigin=""
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cardo:ital,wght@0,400;0,700;1,400&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- LINKS A HOJAS DE ESTILO Y LOGO -->
+    <link rel="stylesheet" type="text/css" href="css/styles.css" />
+    <link rel="icon" href="img/Logo Atlas.png" type="image/x-icon" />
+
+    <!-- LINKS A SCRIPTS -->
+    <script type="text/javascript" src="js/script.js"></script>
+    <script type="text/javascript" src="layers/municipios.js"></script>
+    <script type="text/javascript" src="layers/centro.js"></script>
+  </head>
+
+  <body>
+    <header>
+      <div class="home">
+        <img src="img/Logo Atlas.png" />
+        <a href="index.html" target="_self" rel="home" aria-current="page"
+          >Atlas Mazateco</a
+        >
+      </div>
+
+      <nav>
+        <a href="sistemas.html">Sistemas geográficos</a>
+        <a href="atlas.html">¿Qué es un Atlas Lingüístico?</a>
+        <a href="mapa.html">Mapa interactivo</a>
+      </nav>
+    </header>
+
+    <div class="contenedor">
+      <section>
+        <h2>¿QUÉ ES UN ATLAS LINGÜÍSTICO?</h2>
+        <p>
+          Son proyectos físicos o digitales que consisten en un
+          <strong>conjunto de mapas lingüísticos</strong> que dan a conocer las
+          <strong>lenguas que se hablan dentro de un territorio</strong> (un
+          país, varios países, un estado o varios estados).
+        </p>
+        <a class="btn btn--grnde" href="atlas.html">¿Qué es?</a>
+      </section>
+
+      <figure class="Atlas--PIF">
+        <img
+          src="img/Atlas_linguistico_nangina_2024.png"
+          alt="Mapa de México"
+        />
+      </figure>
+
+      <div class="mapas--contenedor">
+        <!-- Seleccionador de localidades -->
+        <select name="Ir a la localidad" id="Ir a la localidad">
+          <option value="-1">Ir a la localidad</option>
+          <option value="18.1447915, -96.5100424">San Pedro Ixcatlán</option>
+          <option value="18.239834095058100, -96.64532568307060">
+            San José Independencia
+          </option>
+          <option value="17.956017920124600, -97.02151632655050">
+            Tecomavaca
+          </option>
+          <option value="18.60268521160700, -96.68840957264540">
+            Tezonapa
+          </option>
+          <option value="18.14138427175600, -96.86655681948850">
+            Yoloxochitlán
+          </option>
+          <option value="18.19755084533930, -96.94668237642180">
+            Huehuetlán
+          </option>
+          <option value="18.18561552054100, -96.91013806038940">
+            Ocopetatillo
+          </option>
+          <option value="18.03162446717140, -96.66917584680620">
+            San Bartolo Ayautla
+          </option>
+          <option value="18.1993857, -96.4830653">San Miguel Soyaltepec</option>
+          <option value="18.398551410721800, -96.84182341998960">
+            San Sebastián Tlacotepec
+          </option>
+          <option value="18.070630372520000, -96.53350474598640">
+            San Felipe Jalapa de Díaz
+          </option>
+          <option value="18.101628505007500, -96.79891806598060">
+            Huautepec
+          </option>
+          <option value="18.176537172700900, -96.87599560378800">
+            Eloxochitlán
+          </option>
+        </select>
+
+        <div id="mapa" class="mapa--interactivo">
+          <script
+            src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+            integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+            crossorigin=""
+          ></script>
+          <script src="js/mazateco.js"></script>
+        </div>
+
+        <iframe
+          src="https://www.google.com/maps/d/embed?mid=1Oeu36yPaNtgZG9NQ798UPnP8E-c7Qq0&ehbc=2E312F&noprof=1"
+          width="640"
+          height="480"
+        ></iframe>
+      </div>
+
+      <section class="finalidad">
+        <h2>¿Cuál es su finalidad?</h2>
+        <div class="finalidad--texto">
+          <p>
+            A partir de los datos recopilados, se pueden marcar isoglosas entre
+            las diferentes formas de palabras, en las pronunciaciones o
+            cualquier fenómeno gramatical.
+          </p>
+        </div>
+        <div class="grada--finalidad">
+          <div>
+            <p class="obj--titulo">Marcar</p>
+            <p class="obj--texto">
+              A partir de los datos recopilados, se pueden marcar isoglosas
+              entre las diferentes formas de palabras, en las pronunciaciones o
+              cualquier fenómeno gramatical.
+            </p>
+          </div>
+          <div>
+            <p class="obj--titulo">Averiguar</p>
+            <p class="obj--texto">
+              Las isoglosas ayudan a averiguar las divisiones de un espacio por
+              factores internos o factores externos.
+            </p>
+          </div>
+          <div>
+            <p class="obj--titulo">Patrones</p>
+            <p class="obj--texto">
+              Los racimos de isoglosas muestran los patrones de asentamiento, de
+              movimiento de las poblaciones y los límites geopolíticos.
+            </p>
+          </div>
+          <div>
+            <p class="obj--titulo">Diversidad</p>
+            <p class="obj--texto">
+              Proporcionan datos para conocer la diversidad lingüística del
+              territorio.
+            </p>
+          </div>
+          <div>
+            <p class="obj--titulo">Realidad</p>
+            <p class="obj--texto">
+              Conocer la realidad lingüística de los estudiantes, desarrollar
+              propuestas pedagógicas, etc.
+            </p>
+          </div>
+          <div>
+            <p class="obj--titulo">Elaborar</p>
+            <p class="obj--texto">
+              Elaborar y publicar libros de divulgación sobre asuntos de la
+              región.
+            </p>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <section class="elaboracion">
+      <div class="elaboracion--texto">
+        <h2>¿Quiénes participan en su elaboración?</h2>
+        <ul>
+          <li>
+            Colaboradores: sin ellos no se hubieran podido realizar los atlas.
+          </li>
+          <li>Estudiantes de dialectología</li>
+          <li>Lingüistas.</li>
+          <li>Encuestadores especializados en áreas de lingüística.</li>
+          <li>Investigadores de proyecto histórico.</li>
+          <li>Programadores.</li>
+          <li>
+            Fuentes de financiamiento (CONACYT, INALI, CIESAS, FUNDACIÓN BBVA,
+            etc.)
+          </li>
+        </ul>
+      </div>
+      <img src="img/fases_atlas_linguistico_nangina_2024.png" />
+    </section>
+
+    <section class="tipos">
+      <img src="img/municipios_atlas_linguistico_nangina_2024.png" />
+      <div class="tipos--texto">
+        <h2>¿Qué tipos de atlas existen?</h2>
+        <ul>
+          <li>
+            <strong>Atlas de pequeño dominio:</strong> Abarcan una pequeña
+            región.
+          </li>
+          <li>
+            <strong>Atlas de gran dominio:</strong> Puede abarcar un país
+            entero, varias regiones, etc.
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <footer>
+      <figure class="contacto">
+        <section class="acerca-de">
+          <h3>Acerca de</h3>
+          <ul>
+            <li>
+              <a href="#">Equipo</a>
+            </li>
+            <li>
+              <a href="#">Historia</a>
+            </li>
+            <li>
+              <a href="#">Lingüística</a>
+            </li>
+          </ul>
+        </section>
+        <section class="redes">
+          <h3>Social</h3>
+          <ul>
+            <li>
+              <a href="#">Facebook</a>
+            </li>
+            <li>
+              <a href="#">Instagram</a>
+            </li>
+            <li>
+              <a href="#">Twitter</a>
+            </li>
+          </ul>
+        </section>
+      </figure>
+      <p id="copyright" class="copyright text">Copyright &copy; 2025 by TBD.</p>
+    </footer>
+  </body>
+</html>
