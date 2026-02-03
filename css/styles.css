@@ -32,6 +32,9 @@ body {
 
 /* Encabezado */
 header {
+  width: 100%;
+  background-size: cover; /* scale image to cover full width */
+  background-position: center; /* center the image */
   background-color: #a62b0c;
   padding: 16px 32px;
   display: flex;
